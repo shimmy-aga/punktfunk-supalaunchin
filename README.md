@@ -8,9 +8,9 @@ the **console UI** and do **not** show the "Open this link?" prompt.
 
 Built and installed 2026-11-05.
 
-> **Private repository.** It contains the TV's local Punktfunk record id, the
-> host certificate fingerprint, LAN addresses and the signing keystore. See
-> [Privacy](#privacy) before making it public.
+> **Public repository.** It contains the TV's local Punktfunk record id, the
+> host certificate fingerprint, LAN addresses and the signing keystore. These
+> are local-only values; see [Privacy](#privacy).
 
 ## Tiles
 
@@ -168,15 +168,17 @@ dedicated stream activity), not a bridge change.
 
 ## Privacy
 
-This repository is private because it contains:
+This repository is public and contains:
 
 - the TV's local Punktfunk record id,
 - the host certificate fingerprint (`fp`),
 - LAN addresses (`192.168.2.5`, `192.168.2.14`),
 - `tvbridge.keystore` and its password.
 
-If you make it public, redact those values, rebuild the APKs without the record
-id, and do not publish the keystore (generate a new key if you rebuild).
+The record id is meaningful only to the TV's Punktfunk install. The fingerprint
+is the host's public certificate. The addresses are LAN-only. The keystore only
+signs these shortcut packages; if you fork this for another setup, generate your
+own key and use your own record id.
 
 ## Icon licences
 
@@ -192,4 +194,4 @@ id, and do not publish the keystore (generate a new key if you rebuild).
 https://github.com/shimmy-aga/punktfunk-supalaunchin
 ```
 
-Private. Prebuilt signed APKs are in `apk/` and in the `v1.0` release.
+Public. Prebuilt signed APKs are in `apk/` and in the `v1.0` release.
