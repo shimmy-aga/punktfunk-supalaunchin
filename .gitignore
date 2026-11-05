@@ -1,0 +1,4 @@
+**/build/
+*-adaptive-raw.png
+*.idsig
+.DS_Store
